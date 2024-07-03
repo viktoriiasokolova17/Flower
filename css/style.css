@@ -48,3 +48,42 @@ body {
 .nav-item:hover {
     text-decoration: underline;
 }
+
+
+/*hero-section*/
+
+.hero-section {
+    background-color: #98FB98; 
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-container {
+    display: flex;
+}
+
+.hero-img{
+    width: 500px;
+    height: 500px;
+    
+}
+
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+.hero-text h1 {
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 28px;
+}
+
+
