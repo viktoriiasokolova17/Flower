@@ -150,5 +150,85 @@ body {
     line-height: 1.4;
 }
 
+/* shop-section */
 
+.shop-section{
+    background-color: #98FB98; 
+    text-align: center;
+    padding: 100px 0;
+}
 
+.shop-h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides .slide {
+    min-width: 50%;
+    box-sizing: border-box;
+}
+
+.slide-img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.slide-p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.navigation label {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+input[name="slider"] {
+    display: none;
+}
+
+input[name="slider"]:nth-child(1):checked ~ .slides {
+    transform: translateX(0);
+}
+
+input[name="slider"]:nth-child(2):checked ~ .slides {
+    transform: translateX(-50%);
+}
+
+input[name="slider"]:nth-child(1):checked ~ .navigation label:nth-child(1),
+input[name="slider"]:nth-child(2):checked ~ .navigation label:nth-child(2) {
+    background: #4CAF50;
+}
