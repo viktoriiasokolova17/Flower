@@ -232,3 +232,81 @@ input[name="slider"]:nth-child(1):checked ~ .navigation label:nth-child(1),
 input[name="slider"]:nth-child(2):checked ~ .navigation label:nth-child(2) {
     background: #4CAF50;
 }
+
+/* delivery-section */
+
+.delivery-section{
+    text-align: center;
+}
+
+.delivery{
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.delivery-h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.delivery-p{
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+.delivery-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.delivery-option{
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+}
+
+.delivery-option-h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: #4CAF50;
+    text-transform: uppercase;
+
+}
+
+.delivery-option-p{
+    font-size: 22px;
+    line-height: 1.5;
+
+
+}
+
+.delivery-contact {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.delivery-contact h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.delivery-contact p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.delivery-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.delivery-contact ul li {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
