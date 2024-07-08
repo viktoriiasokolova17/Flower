@@ -155,7 +155,7 @@ body {
 .shop-section{
     background-color: #98FB98; 
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .shop-h2{
@@ -309,4 +309,68 @@ input[name="slider"]:nth-child(2):checked ~ .navigation label:nth-child(2) {
 .delivery-contact ul li {
     font-size: 1.2em;
     margin-bottom: 5px;
+}
+
+
+/* contact-section */
+
+.contact-section{
+    background-color: #98FB98;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.contact{
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.contact-h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto; 
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
 }
