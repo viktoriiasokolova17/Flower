@@ -237,6 +237,7 @@ input[name="slider"]:nth-child(2):checked ~ .navigation label:nth-child(2) {
 
 .delivery-section{
     text-align: center;
+    padding: 20px;
 }
 
 .delivery{
@@ -374,3 +375,46 @@ input[name="slider"]:nth-child(2):checked ~ .navigation label:nth-child(2) {
 .contact-form button:hover {
     background-color: #45a049;
 }
+
+
+/* footer */
+
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.footer-nav-list {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-nav-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-nav-item a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.footer-contact-p {
+    margin: 20px;
+    font-size: 18px;
+}
+
