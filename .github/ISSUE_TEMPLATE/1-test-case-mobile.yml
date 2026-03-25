@@ -1,0 +1,113 @@
+name: "Mobile Test Case"
+description: "Create a new mobile test case for Android or iPhone"
+title: "[TC] "
+labels: ["test-case"]
+body:
+  - type: input
+    id: test-id
+    attributes:
+      label: Test Case ID
+      description: "Unique identifier (e.g., TC-LOGIN-001)"
+      placeholder: "TC-XXX-000"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: "Test case priority level"
+      options:
+        - "🔴 Critical"
+        - "🟠 High"
+        - "🟡 Medium"
+        - "🟢 Low"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: test-type
+    attributes:
+      label: Test Type
+      description: "What type of test is this?"
+      options:
+        - Positive 
+        - Negative 
+        - Edge case
+        - Performance
+        - UI/Layout
+        - Gesture 
+        - Orientation change
+        - Network handling
+        - Smoke test
+        - Regression
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device Type
+      description: "Target device for testing"
+      options:
+        - Android Phone
+        - iPhone
+        - Both (Android & iPhone)
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: "Which environment to test on?"
+      options:
+        - Development
+        - Production
+        - Both
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: "What must be done before starting the test?"
+      placeholder: |
+        - App is installed and launched
+        - User is logged in
+        - Network connection is available
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Test Steps
+      description: "Step-by-step instructions (be specific for mobile gestures)"
+      placeholder: |
+        1. Tap on element/button
+        2. Type or select value
+        3. Wait for response
+        4. Observe result
+        5. Verify expected outcome
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected Result
+      description: "What should happen after completing the steps?"
+      placeholder: |
+        - Action completes successfully
+        - Data is displayed correctly
+        - UI responds as expected
+        - No errors appear
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: "Any special considerations or notes?"
+      placeholder: |
+        - Test on both portrait and landscape orientation
+        - Verify app doesn't crash on network interruption

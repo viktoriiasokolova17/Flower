@@ -1,0 +1,69 @@
+name: "Mobile Test Run"
+description: "Document results of mobile test execution"
+title: "[TEST RUN] "
+labels: ["test-run"]
+body:
+  - type: input
+    id: test-run-id
+    attributes:
+      label: Test Run ID
+      description: "Unique identifier (e.g., TR-001-2026-03-12)"
+      placeholder: "TR-XXX-YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Test Environment
+      description: "Which environment was tested?"
+      options:
+        - Development
+        - Production
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-tested
+    attributes:
+      label: Devices Tested
+      description: "Which devices were used for this test run?"
+      options:
+        - Android Phone
+        - iPhone
+        - Both (Android & iPhone)
+      default: 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: test-cases-summary
+    attributes:
+      label: Test Cases Executed
+      description: "List of test case IDs executed"
+      placeholder: |
+        ### Test Scope
+
+        - [x] [TC-LOGIN-001] User login with valid credentials #101 ✅ Passed
+        - [x] [TC-LOGIN-002] User login with invalid password #102 ✅ Passed
+        - [x] [TC-SEARCH-001] Search functionality works #103 ✅ Passed
+        - [ ] [TC-SEARCH-002] Search with special characters #104 ❌ Failed
+        - [x] [TC-NOTIF-001] Notifications display correctly #105 ✅ Passed
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments & Evidence
+      description: "Screenshots, videos, logs, or other evidence of test execution"
+      placeholder: |
+        Screenshots:
+        - [TC-001-passed.png] - Login successful
+        - [TC-002-failed.png] - Search button not responding
+
+        Videos:
+        - [test-run-demo.mp4] - Full test execution
+
+        Logs:
+        - [app-logs.txt] - App debug logs
+        - [crash-logs.txt] - Crash dump if any
