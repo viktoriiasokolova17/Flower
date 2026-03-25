@@ -1,0 +1,134 @@
+name: "Bug Report"
+description: "Report a bug found during mobile testing"
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: input
+    id: bug-id
+    attributes:
+      label: Bug ID
+      description: "Unique identifier (e.g., BUG-LOGIN-001)"
+      placeholder: "BUG-XXX-000"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: "How severe is this bug?"
+      options:
+        - "🔴 Critical"
+        - "🟠 High"
+        - "🟡 Medium"
+        - "🟢 Low"
+      default: 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: Device Type
+      description: "Which device type has this bug?"
+      options:
+        - iPhone
+        - Android Phone
+        - Both (Android & iPhone)
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: "Which environment?"
+      options:
+        - Development
+        - Production
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Bug Type
+      description: "What type of bug is this?"
+      options:
+        - Functional
+        - UI/Layout
+        - Performance
+        - Crash
+        - Network
+        - Battery/Memory
+        - Security
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: "Clear description of what's wrong"
+      placeholder: |
+        The login button doesn't respond when clicked.
+        User taps the button but nothing happens.
+        No error message is displayed.
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: "Exact steps to reproduce the bug"
+      placeholder: |
+        1. Tap on "Login" tab
+        2. Enter email: test@example.com
+        3. Enter password: Test123!
+        4. Tap "Sign In" button
+        5. Observe no action
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: "What should happen?"
+      placeholder: |
+        - User should be logged in
+        - App should redirect to Home screen
+        - Or error message should appear within 3 seconds
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: "What actually happens?"
+      placeholder: |
+        - Button does not respond to tap
+        - No error message displayed
+        - No action taken
+        - User remains on login screen
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: "What conditions must exist for this bug?"
+      placeholder: |
+        - App is installed and launched
+        - User is on login screen
+        - Internet connection available
+        - Test account exists
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Videos
+      description: "Attach screenshots or video showing the bug"
+      placeholder: |
+        - Screenshot 1: Login screen with unresponsive button
+        - Video: 30 second video showing button not responding
+        (Attach files in the comment section below)
